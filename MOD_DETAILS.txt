@@ -1,0 +1,9 @@
+;MOD_ID|wt.MoveXenonSlider
+;MOD_NAME|Move Xenon Slider
+;MOD_ICON|
+;AUTHOR|WT
+;MOD_ZIP_NAME|MoveXenonSlider.zip
+
+[center][b]Move Xenon Slider[/b][/center]
+
+Moves the Xenon usage slider from the Tuning screen to the Dive Selection screen.

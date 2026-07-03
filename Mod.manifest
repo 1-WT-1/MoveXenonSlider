@@ -1,0 +1,36 @@
+[mod_information]
+
+name="Move Xenon Slider"
+id="wt.MoveXenonSlider"
+description="MOD_XENON_SLIDER_DESC"
+brief="MOD_XENON_SLIDER_BRIEF"
+author="WT"
+
+[version]
+
+version_major=0
+version_minor=0
+version_bugfix=1
+
+[tags]
+
+TAG_UI={
+"type": "bool",
+"value": true
+}
+TAG_QOL={
+"type": "bool",
+"value": true
+}
+
+[links]
+
+HEVLIB_GITHUB={
+"URL": "https://github.com/1-WT-1/MoveXenonSlider"
+}
+
+[manifest_definitions]
+
+manifest_version=2.2
+dependancy_mod_ids=PoolStringArray( "hev.LIBRARY" )
+manifest_url="https://raw.githubusercontent.com/1-WT-1/MoveXenonSlider/main/Mod.manifest"

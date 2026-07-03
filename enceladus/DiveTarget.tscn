@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://enceladus/DiveTarget.tscn" type="PackedScene" id=1]
+[ext_resource path="res://enceladus/AnalogControlSlider.gd" type="Script" id=2]
+[ext_resource path="res://MoveXenonSlider/enceladus/DiveTarget.gd" type="Script" id=3]
+
+[node name="DiveTarget" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="FuelSlider" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+focus_neighbour_bottom = NodePath("../XenonSlider")
+focus_next = NodePath("../XenonSlider")
+
+[node name="TransitTimeLabel" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="42"]
+text = "HUD_RETURN_TIME"
+uppercase = true
+
+[node name="TransitTimeValue" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="43"]
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 8
+align = 2
+
+[node name="TransitTimeUnit" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="44"]
+text = "h"
+
+[node name="TransitTimeFiller1" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="45"]
+
+[node name="TransitTimeFiller2" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="46"]
+
+[node name="TransitTimeFiller3" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="47"]
+
+[node name="XenonLabel" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="48"]
+text = "TUNE_XENON_BURN"
+uppercase = true
+
+[node name="XenonValue" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="49"]
+rect_min_size = Vector2( 128, 0 )
+size_flags_horizontal = 8
+align = 2
+
+[node name="XenonUnit" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="50"]
+text = "%"
+
+[node name="XenonSlider" type="HSlider" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="51"]
+focus_neighbour_left = NodePath("../../../../../VBoxContainer/AstrogationDestinations")
+focus_neighbour_top = NodePath("../FuelSlider")
+focus_neighbour_bottom = NodePath("../AmmoSlider")
+focus_next = NodePath("../AmmoSlider")
+focus_previous = NodePath("../FuelSlider")
+size_flags_horizontal = 3
+script = ExtResource( 2 )
+
+[node name="XenonFiller1" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="52"]
+
+[node name="XenonFiller2" type="Label" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer" index="53"]
+
+[node name="AmmoSlider" parent="VBoxContainer2/HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GridContainer"]
+focus_neighbour_top = NodePath("../XenonSlider")
+focus_previous = NodePath("../XenonSlider")
